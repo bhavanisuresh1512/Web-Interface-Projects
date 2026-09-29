@@ -1,0 +1,15 @@
+{
+  "short_name": "Nestora",
+  "name": "Nestora Homes India",
+  "icons": [
+    {
+      "src": "nestora-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#12372A",
+  "background_color": "#F5F5F0"
+}

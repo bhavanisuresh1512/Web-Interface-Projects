@@ -1,0 +1,1116 @@
+/* =========================================
+   STUDENT DASHBOARD
+========================================= */
+
+.student-dashboard {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  padding: 28px 32px 40px;
+
+  color: #172033;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.student-dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.student-dashboard-header h1 {
+  margin: 0 0 6px;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #172033;
+}
+
+.student-dashboard-header p {
+  margin: 0;
+
+  font-size: 13px;
+  color: #7c879b;
+}
+
+
+/* =========================================
+   BROWSE BUTTON
+========================================= */
+
+.browse-quizzes-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 40px;
+
+  padding: 0 17px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #6366f1;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.browse-quizzes-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   STAT GRID
+========================================= */
+
+.student-stat-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.student-stat-card {
+  min-height: 112px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8edf5;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.student-stat-card > div:last-child {
+  min-width: 0;
+}
+
+.student-stat-card span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8993a5;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.student-stat-card h2 {
+  margin: 0 0 3px;
+
+  color: #172033;
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.student-stat-card small {
+  display: block;
+
+  max-width: 150px;
+
+  overflow: hidden;
+
+  color: #98a2b3;
+
+  font-size: 9px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   STAT ICONS
+========================================= */
+
+.student-stat-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+}
+
+.student-stat-icon.purple {
+  background: #f0edff;
+  color: #7c5cff;
+}
+
+.student-stat-icon.blue {
+  background: #eaf4ff;
+  color: #3b82f6;
+}
+
+.student-stat-icon.green {
+  background: #eafaf1;
+  color: #16a36a;
+}
+
+.student-stat-icon.orange {
+  background: #fff4e8;
+  color: #f59e0b;
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.student-main-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(330px, 0.8fr);
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================
+   BOTTOM GRID
+========================================= */
+
+.student-bottom-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(330px, 0.8fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   PANEL
+========================================= */
+
+.student-panel {
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e8edf5;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 2px 8px rgba(15, 23, 42, 0.03);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   PANEL HEADER
+========================================= */
+
+.student-panel-header {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #eef1f6;
+}
+
+.student-panel-header h2 {
+  margin: 0 0 4px;
+
+  color: #172033;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.student-panel-header p {
+  margin: 0;
+
+  color: #9aa3b2;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   VIEW ALL
+========================================= */
+
+.student-view-all {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6366f1;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.student-view-all:hover {
+  color: #4f46e5;
+}
+
+
+/* =========================================
+   RECENT QUIZZES
+========================================= */
+
+.student-recent-list {
+  padding: 4px 20px;
+}
+
+.student-recent-item {
+  min-height: 68px;
+
+  display: grid;
+
+  grid-template-columns:
+    38px
+    minmax(0, 1fr)
+    65px
+    20px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.student-recent-item:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   RECENT QUIZ ICON
+========================================= */
+
+.recent-quiz-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f1efff;
+
+  color: #6d5ce7;
+}
+
+
+/* =========================================
+   RECENT QUIZ INFO
+========================================= */
+
+.recent-quiz-info {
+  min-width: 0;
+}
+
+.recent-quiz-info h3 {
+  margin: 0 0 5px;
+
+  overflow: hidden;
+
+  color: #263044;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recent-quiz-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #9ba4b3;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   SCORE
+========================================= */
+
+.recent-score {
+  text-align: right;
+}
+
+.recent-score strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.recent-score span {
+  color: #a1a9b6;
+
+  font-size: 8px;
+}
+
+.score-good {
+  color: #16a36a;
+}
+
+.score-low {
+  color: #ef5350;
+}
+
+.completed-icon {
+  color: #20b878;
+}
+
+
+/* =========================================
+   PERFORMANCE
+========================================= */
+
+.performance-icon {
+  color: #6366f1;
+}
+
+.performance-content {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 24px 25px 18px;
+}
+
+
+/* =========================================
+   PERFORMANCE CIRCLE
+========================================= */
+
+.performance-circle {
+  width: 125px;
+  height: 125px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.performance-circle-inner {
+  width: 96px;
+  height: 96px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+
+.performance-circle-inner strong {
+  color: #172033;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.performance-circle-inner span {
+  margin-top: 3px;
+
+  color: #9aa3b2;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   PERFORMANCE DETAILS
+========================================= */
+
+.performance-details {
+  flex: 1;
+}
+
+.performance-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.performance-detail:last-child {
+  border-bottom: none;
+}
+
+.performance-detail span {
+  color: #8993a5;
+
+  font-size: 9px;
+}
+
+.performance-detail strong {
+  color: #263044;
+
+  font-size: 12px;
+}
+
+.passed-text {
+  color: #16a36a !important;
+}
+
+.failed-text {
+  color: #ef5350 !important;
+}
+
+
+/* =========================================
+   PERFORMANCE PROGRESS
+========================================= */
+
+.performance-progress {
+  padding: 0 25px 22px;
+}
+
+.performance-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.performance-progress-header span {
+  color: #7e899c;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.performance-progress-header strong {
+  color: #4f5b70;
+
+  font-size: 9px;
+}
+
+.performance-bar {
+  width: 100%;
+  height: 6px;
+
+  overflow: hidden;
+
+  background: #edf0f6;
+
+  border-radius: 20px;
+}
+
+.performance-fill {
+  height: 100%;
+
+  background: #6366f1;
+
+  border-radius: 20px;
+
+  transition: width 0.4s ease;
+}
+
+.performance-progress p {
+  margin: 8px 0 0;
+
+  color: #a0a8b5;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   AVAILABLE QUIZZES
+========================================= */
+
+.upcoming-list {
+  padding: 4px 20px;
+}
+
+.upcoming-item {
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.upcoming-item:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   QUIZ DATE
+========================================= */
+
+.upcoming-date {
+  width: 42px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  background: #f3f1ff;
+
+  border-radius: 8px;
+
+  color: #6366f1;
+}
+
+.upcoming-date strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+}
+
+.upcoming-date span {
+  margin-top: 2px;
+
+  font-size: 7px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   UPCOMING INFO
+========================================= */
+
+.upcoming-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.upcoming-info h3 {
+  margin: 0 0 4px;
+
+  overflow: hidden;
+
+  color: #263044;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upcoming-info > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #9aa3b2;
+
+  font-size: 8px;
+}
+
+.upcoming-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.upcoming-meta span {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  color: #9aa3b2;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.upcoming-start-btn {
+  height: 30px;
+
+  padding: 0 12px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #6366f1;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.upcoming-start-btn:hover {
+  background: #4f46e5;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.award-icon {
+  color: #f59e0b;
+}
+
+.achievement-list {
+  padding: 5px 20px;
+}
+
+.achievement-item {
+  min-height: 64px;
+
+  display: grid;
+
+  grid-template-columns:
+    38px
+    minmax(0, 1fr)
+    25px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.achievement-item:last-child {
+  border-bottom: none;
+}
+
+.achievement-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+}
+
+.achievement-icon.gold {
+  background: #fff6df;
+  color: #e8a317;
+}
+
+.achievement-icon.green {
+  background: #eafaf1;
+  color: #16a36a;
+}
+
+.achievement-icon.blue {
+  background: #eaf4ff;
+  color: #3b82f6;
+}
+
+.achievement-item h3 {
+  margin: 0 0 3px;
+
+  color: #263044;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.achievement-item p {
+  margin: 0;
+
+  color: #9ba4b3;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   ACHIEVEMENT BUTTON
+========================================= */
+
+.all-achievements-btn {
+  width: calc(100% - 40px);
+
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin: 10px 20px 16px;
+
+  border: 1px solid #e3e7ef;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #6366f1;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.all-achievements-btn:hover {
+  background: #f7f7ff;
+
+  border-color: #cfd2ff;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.student-empty-state {
+  min-height: 270px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 30px 20px;
+
+  text-align: center;
+}
+
+.student-empty-state.small {
+  min-height: 205px;
+}
+
+.student-empty-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  background: #f0efff;
+
+  border-radius: 50%;
+
+  color: #6366f1;
+}
+
+.student-empty-state h3 {
+  margin: 0 0 6px;
+
+  color: #263044;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.student-empty-state p {
+  max-width: 320px;
+
+  margin: 0 0 15px;
+
+  color: #9ba4b3;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+.student-empty-state button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  height: 34px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #6366f1;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.student-empty-state button:hover {
+  background: #4f46e5;
+}
+
+
+/* =========================================
+   RESPONSIVE - LAPTOP
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .student-dashboard {
+    padding: 24px;
+  }
+
+  .student-stat-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .student-main-grid,
+  .student-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .student-dashboard {
+    padding: 18px 15px 30px;
+  }
+
+  .student-dashboard-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .browse-quizzes-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .student-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-content {
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+  .performance-circle {
+    width: 105px;
+    height: 105px;
+  }
+
+  .performance-circle-inner {
+    width: 81px;
+    height: 81px;
+  }
+
+  .student-recent-item {
+    grid-template-columns:
+      36px
+      minmax(0, 1fr)
+      55px;
+  }
+
+  .completed-icon {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .student-dashboard {
+    padding: 15px 12px 25px;
+  }
+
+  .student-dashboard-header h1 {
+    font-size: 23px;
+  }
+
+  .student-dashboard-header p {
+    font-size: 11px;
+  }
+
+  .student-stat-card {
+    min-height: 95px;
+
+    padding: 14px;
+  }
+
+  .student-stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .student-stat-card h2 {
+    font-size: 20px;
+  }
+
+  .student-panel-header {
+    padding: 14px 15px;
+  }
+
+  .student-recent-list,
+  .upcoming-list,
+  .achievement-list {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .recent-quiz-meta {
+    display: none;
+  }
+
+  .recent-score {
+    display: none;
+  }
+
+  .student-recent-item {
+    grid-template-columns:
+      36px
+      minmax(0, 1fr)
+      20px;
+  }
+
+  .performance-content {
+    flex-direction: column;
+
+    padding: 20px 15px;
+  }
+
+  .performance-details {
+    width: 100%;
+  }
+
+  .performance-progress {
+    padding: 0 15px 18px;
+  }
+
+  .upcoming-item {
+    align-items: flex-start;
+  }
+
+  .upcoming-start-btn {
+    padding: 0 9px;
+  }
+
+}

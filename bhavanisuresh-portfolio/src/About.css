@@ -1,0 +1,161 @@
+.about{
+    padding:110px 0;
+    background:var(--paper);
+    position:relative;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.eyebrow{
+    color:var(--violet);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:.9rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.section-title h2{
+    font-family:var(--font-display);
+    font-size:3rem;
+    color:var(--ink);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.4fr .9fr;
+    gap:60px;
+    align-items:start;
+}
+
+.about-left{
+    animation:fadeLeft 1s ease;
+}
+
+.about-left p{
+    color:var(--slate);
+    line-height:2;
+    margin-bottom:28px;
+    font-size:1.05rem;
+}
+
+.about-left span{
+    color:var(--violet);
+    font-weight:700;
+}
+
+.about-left strong{
+    color:var(--ink);
+}
+
+.info-card,
+.interest-card{
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px;
+    margin-bottom:30px;
+    transition:.4s;
+    box-shadow:0 12px 30px var(--shadow);
+    animation:fadeRight 1s ease;
+}
+
+.info-card:hover,
+.interest-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--violet);
+}
+
+.info-card h3,
+.interest-card h3{
+    font-family:var(--font-display);
+    color:var(--ink);
+    margin-bottom:25px;
+    font-size:1.3rem;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.info-row:last-child{
+    border-bottom:none;
+}
+
+.info-row span:first-child{
+    color:var(--slate);
+}
+
+.info-row span:last-child{
+    color:var(--ink);
+    font-weight:600;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.tags span{
+    padding:10px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,var(--violet),var(--mint));
+    color:white;
+    font-size:.9rem;
+    transition:.4s;
+}
+
+.tags span:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+@keyframes fadeLeft{
+    from{
+        opacity:0;
+        transform:translateX(-70px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+    from{
+        opacity:0;
+        transform:translateX(70px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@media(max-width:900px){
+
+.about-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.section-title h2{
+    font-size:2.3rem;
+}
+
+.about-left{
+    text-align:center;
+}
+
+.info-card,
+.interest-card{
+    margin-bottom:25px;
+}
+
+}

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top left, #1b1035, #0a0714 60%);
+  min-height: 100vh;
+  color: #f1edff;
+  font-family: 'Outfit', sans-serif;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #a8a2c0;
+  font-size: 1.05rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  color: #d8d3ec;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(167, 139, 250, 0.5);
+}
+
+.category-card.active {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.25), rgba(96, 165, 250, 0.2));
+  border-color: #a78bfa;
+  color: #fff;
+  box-shadow: 0 0 24px rgba(167, 139, 250, 0.25);
+}
+
+.category-icon {
+  font-size: 1.6rem;
+}
+
+.converter-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.converter-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.unit-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.unit-block label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #a8a2c0;
+  font-weight: 600;
+}
+
+.unit-block select,
+.unit-block input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #f1edff;
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+}
+
+.unit-block select:focus,
+.unit-block input:focus {
+  border-color: #a78bfa;
+}
+
+.result-display {
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.3rem;
+  color: #6ee7b7;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+}
+
+.swap-btn {
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.3rem;
+  color: #0a0714;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: transform 0.2s ease;
+}
+
+.swap-btn:hover {
+  transform: rotate(180deg);
+}
+
+.conversion-summary {
+  margin-top: 24px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: #d8d3ec;
+}
+
+.quick-reference {
+  margin-top: 40px;
+}
+
+.quick-reference h2 {
+  font-size: 1.1rem;
+  color: #a8a2c0;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.reference-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reference-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.reference-unit {
+  font-size: 0.85rem;
+  color: #a8a2c0;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #6b6580;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.2rem; }
+  .converter-row { grid-template-columns: 1fr; }
+  .swap-btn { justify-self: center; margin: 0; transform: rotate(90deg); }
+}

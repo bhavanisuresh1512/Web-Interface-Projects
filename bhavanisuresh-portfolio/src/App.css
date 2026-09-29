@@ -1,0 +1,138 @@
+:root{
+
+    --ink:#0A3323;
+    --paper:#F7F4D5;
+    --paper-dim:#F1EDC9;
+
+    --violet:#105666;
+    --violet-dim:#D8ECE8;
+
+    --slate:#839958;
+    --mint:#D3968C;
+
+    --line:rgba(10,51,35,0.12);
+    --shadow:rgba(10,51,35,0.12);
+
+
+    --font-display:'Space Grotesk',sans-serif;
+    --font-body:'Inter',sans-serif;
+
+    --max-w:1120px;
+
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    overflow-x:hidden;
+
+}
+
+
+body::-webkit-scrollbar{
+    width:8px;
+}
+
+
+body::-webkit-scrollbar-thumb{
+    background:var(--violet);
+    border-radius:20px;
+}
+
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+
+.wrap{
+
+    max-width:var(--max-w);
+    margin:auto;
+    padding:0 28px;
+
+}
+
+
+section{
+    overflow:hidden;
+}
+
+:root{
+
+    --ink:#0A3323;
+    --paper:#F7F4D5;
+    --paper-dim:#F1EDC9;
+
+    --violet:#105666;
+    --violet-dim:#D8ECE8;
+
+    --slate:#839958;
+    --mint:#D3968C;
+
+}
+
+
+.dark{
+
+    --ink:#F7F4D5;
+    --paper:#071E16;
+    --paper-dim:#103528;
+
+    --violet:#5FB5C3;
+    --violet-dim:#184F5B;
+
+    --slate:#B5C78E;
+    --mint:#E3A49B;
+
+}
+
+
+body{
+
+    background:var(--paper);
+    color:var(--ink);
+
+    transition:
+    background .4s ease,
+    color .4s ease;
+
+}
+
+
+@media(max-width:760px){
+
+    .wrap{
+        padding:0 20px;
+    }
+
+}

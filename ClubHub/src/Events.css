@@ -1,0 +1,24 @@
+.events-hero{
+    background:#16302B;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.events-hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.events-hero p{
+    color:#E0E0E0;
+    font-size:18px;
+}
+
+.events-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    padding:60px 8%;
+    background:#E0E0E0;
+}

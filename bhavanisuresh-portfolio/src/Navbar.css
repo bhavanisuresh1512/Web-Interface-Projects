@@ -1,0 +1,138 @@
+.site-nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(247,244,213,.95);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+    transition:.4s;
+}
+
+[data-theme="dark"] .site-nav{
+    background:rgba(7,30,22,.95);
+}
+
+.nav-inner{
+    max-width:1120px;
+    margin:auto;
+    padding:18px 30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    font-family:var(--font-display);
+    font-size:1.55rem;
+    font-weight:700;
+    color:var(--ink);
+    letter-spacing:.5px;
+    transition:.35s;
+}
+
+.brand .dot{
+    color:var(--violet);
+}
+
+.brand:hover{
+    transform:scale(1.05);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--slate);
+    font-size:.95rem;
+    font-weight:600;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--violet);
+    transition:.35s;
+    transform:translateX(-50%);
+}
+
+.nav-links a:hover{
+    color:var(--ink);
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.theme-toggle{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:var(--paper);
+    color:var(--violet);
+    font-size:1rem;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.theme-toggle:hover{
+    background:var(--violet);
+    color:var(--paper);
+    transform:rotate(180deg);
+}
+
+.nav-burger{
+    display:none;
+    width:42px;
+    height:42px;
+    border:none;
+    background:transparent;
+    color:var(--ink);
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.nav-burger{
+    display:block;
+}
+
+.nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:var(--paper);
+    border-top:1px solid var(--line);
+    flex-direction:column;
+    gap:22px;
+    padding:30px 0;
+    display:none;
+}
+
+[data-theme="dark"] .nav-links{
+    background:var(--paper);
+}
+
+.nav-links.open{
+    display:flex;
+}
+}

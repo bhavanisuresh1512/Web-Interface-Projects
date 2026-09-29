@@ -1,0 +1,86 @@
+.achievement-hero{
+    background:#16302B;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.achievement-hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.achievement-hero p{
+    font-size:18px;
+    color:#E0E0E0;
+}
+
+.achievement-container{
+    background:#E0E0E0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:70px 8%;
+}
+
+.achievement-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.achievement-card:hover{
+    transform:translateY(-10px);
+}
+
+.achievement-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    font-size:40px;
+    color:white;
+}
+
+.achievement-card h2{
+    margin:20px 0 10px;
+    color:#390517;
+}
+
+.achievement-card p{
+    color:#555;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.achievement-card button{
+    background:#390517;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.achievement-card button:hover{
+    background:#16302B;
+}
+
+@media(max-width:768px){
+
+.achievement-hero h1{
+    font-size:36px;
+}
+
+.achievement-container{
+    padding:40px 20px;
+}
+
+}

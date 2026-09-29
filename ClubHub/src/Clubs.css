@@ -1,0 +1,36 @@
+.clubs-hero{
+
+    background:#16302B;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+
+}
+
+.clubs-hero h1{
+
+    font-size:48px;
+    margin-bottom:15px;
+
+}
+
+.clubs-hero p{
+
+    font-size:18px;
+    color:#E0E0E0;
+
+}
+
+.clubs-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    padding:60px 8%;
+
+    background:#E0E0E0;
+
+}
